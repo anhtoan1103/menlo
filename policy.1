@@ -1,0 +1,401 @@
+{
+    "host": "http://10.3.0.1:9090/api/policy/v3/export/published/-1", 
+    "policy": {
+        "av": [], 
+        "bandwidth": {
+            "rules": [
+                {
+                    "bandwidth": {
+                        "action_at_quota": "block", 
+                        "action_at_threshold": "allow", 
+                        "bandwidth_quota": 0, 
+                        "bandwidth_threshold": 0, 
+                        "enabled": false
+                    }, 
+                    "desc": "Default Bandwidth rule", 
+                    "groups": [], 
+                    "isDefault": true, 
+                    "name": "Default Bandwidth rule", 
+                    "other_video_resolution": {
+                        "additional_site_rules": [
+                            {
+                                "label": "Vimeo", 
+                                "regex": "^(https?://)?(\\w+.)*(vimeo.com)/.+$", 
+                                "use_bandwidth_limit": false
+                            }, 
+                            {
+                                "label": "Dailymotion", 
+                                "regex": "^(https?://)?(\\w+.)*(dailymotion.com)/.+$", 
+                                "use_bandwidth_limit": false
+                            }
+                        ], 
+                        "enable_background_optimization": false, 
+                        "enabled": false, 
+                        "max_video_background_bytes_sec": 0, 
+                        "max_video_foreground_bytes_sec": 0
+                    }, 
+                    "users": [], 
+                    "youtube": {
+                        "enable_background_optimization": false, 
+                        "enabled": false, 
+                        "max_background_res": "720p", 
+                        "max_foreground_res": "720p"
+                    }
+                }
+            ]
+        }, 
+        "bypass": false, 
+        "casb": {
+            "appRules": {}, 
+            "exceptions": {}, 
+            "profiles": {}
+        }, 
+        "categories": [], 
+        "categoriesExceptions": [], 
+        "content": {
+            "created_at": 1645171652644, 
+            "defaultDLPAction": {
+                "allowedSitesAction": "allow", 
+                "isolatedSitesAction": "allow"
+            }, 
+            "defaultDocumentAction": {
+                "allSites": {
+                    "action": "allow", 
+                    "actionOnMalware": "block", 
+                    "downloadOriginal": "allow", 
+                    "downloadSafe": "allow", 
+                    "passwordAction": "prompt", 
+                    "prependLinks": false, 
+                    "print": "allow", 
+                    "viewer": "cap"
+                }
+            }, 
+            "defaultFileAction": {
+                "allowedSites": {
+                    "action": "allow", 
+                    "actionOnMalware": "block", 
+                    "passwordAction": "prompt", 
+                    "print": "allow", 
+                    "viewer": "cap"
+                }, 
+                "isolatedSites": {
+                    "action": "allow", 
+                    "actionOnMalware": "block", 
+                    "passwordAction": "prompt", 
+                    "print": "allow", 
+                    "viewer": "cap"
+                }
+            }, 
+            "dlpTypes": [], 
+            "documentAv": {
+                "actionOnUnknown": "allow", 
+                "enabled": false, 
+                "scoreThreshold": 1
+            }, 
+            "documents": [], 
+            "fileAv": {
+                "actionOnUnknown": "allow", 
+                "enabled": false, 
+                "scoreThreshold": 1
+            }, 
+            "files": [], 
+            "updated_at": 1645171652644
+        }, 
+        "contentInspection": [], 
+        "createdAt": 1645171652644, 
+        "customization_dlp": {}, 
+        "customization_email": {}, 
+        "customization_web": {}, 
+        "dlp": {
+            "rules": [
+                {
+                    "created_at": 1645171536603, 
+                    "desc": "", 
+                    "dlp": {
+                        "action": "block", 
+                        "categories": [], 
+                        "dlp_auditors": [], 
+                        "dlp_dicts": [
+                            "2f09f724-d942-4fef-9626-09773ec3fab9"
+                        ], 
+                        "dlp_groups": [], 
+                        "doc_types": [
+                            {
+                                "name": "All", 
+                                "type": "All"
+                            }
+                        ], 
+                        "domains": [], 
+                        "inspect_inputs": true, 
+                        "max_file_size": 52428800, 
+                        "policy_headers": [], 
+                        "protocols": [
+                            "http", 
+                            "https"
+                        ], 
+                        "reason": "", 
+                        "send_alert": false, 
+                        "session_type": "all", 
+                        "tags": []
+                    }, 
+                    "entities": {
+                        "all": true, 
+                        "groups": [], 
+                        "users": []
+                    }, 
+                    "name": "Mike SV14421", 
+                    "notification": "", 
+                    "updated_at": 1645171536603, 
+                    "uuid": "ac8a5fb3-987e-4049-ba77-c3bd264f3279"
+                }
+            ]
+        }, 
+        "dlpAuditors": [], 
+        "dlpDicts": [
+            {
+                "category": "Other", 
+                "created_at": 1645171487169, 
+                "criteria": [
+                    {
+                        "case_sensitive": false, 
+                        "count": 1, 
+                        "criteria_type": "string", 
+                        "criteria_value": "foobar"
+                    }
+                ], 
+                "desc": "", 
+                "name": "Mike Test", 
+                "region": "Other", 
+                "should_match": "all", 
+                "updated_at": 1645171487169, 
+                "uuid": "2f09f724-d942-4fef-9626-09773ec3fab9"
+            }
+        ], 
+        "dlpGroups": [], 
+        "dlpOverrides": [], 
+        "dlpTypes": [], 
+        "docsV4": {}, 
+        "documents": [], 
+        "egress_policy": {}, 
+        "exceptionsV3": [], 
+        "fingerprints": [], 
+        "fwaas": {
+            "feeds": [], 
+            "rules": [], 
+            "services": []
+        }, 
+        "globalBNB": {
+            "post": {}, 
+            "pre": {}
+        }, 
+        "globalExceptions": {
+            "post": [], 
+            "pre": []
+        }, 
+        "isolation": {}, 
+        "mpa": {
+            "hash": "", 
+            "mpaPolicy": {
+                "access_rules": {
+                    "app_rules": [], 
+                    "updated_at": 0
+                }, 
+                "app_catalogs": {}, 
+                "clusters": {}
+            }
+        }, 
+        "overrides": [], 
+        "parentGlobalBNB": {
+            "post": {}, 
+            "pre": {}
+        }, 
+        "parentGlobalExceptions": {
+            "post": [], 
+            "pre": []
+        }, 
+        "portal_v2": "true", 
+        "profiles": {}, 
+        "revisionId": "5f5a8337350242fa8cf464339bdbb8e4", 
+        "risks": [], 
+        "safemail_attachments": {
+            "mime_spec": {}, 
+            "rules": [], 
+            "user_spec": {}, 
+            "version": 1
+        }, 
+        "safemail_classification": {
+            "url_classifiers": {
+                "phishTarget": {
+                    "value": []
+                }
+            }
+        }, 
+        "safemail_config": {
+            "obfuscate_urls": false, 
+            "tenant_encoding": true, 
+            "whitelist_private": true, 
+            "whitelist_unqualified": true
+        }, 
+        "safemail_isolation": [
+            {
+                "attribute_rules": {
+                    "match": "all", 
+                    "rules": []
+                }, 
+                "created_at": 1455822401, 
+                "description": "Default action for Email isolation", 
+                "menlo_risk_score": [
+                    {
+                        "entry_action": "read_write", 
+                        "exit_action": "not_allowed", 
+                        "risk_score": "low", 
+                        "user_experience_banner": "basic"
+                    }, 
+                    {
+                        "entry_action": "read_only", 
+                        "exit_action": "read_write", 
+                        "risk_score": "medium", 
+                        "user_experience_banner": "basic"
+                    }, 
+                    {
+                        "entry_action": "read_only", 
+                        "exit_action": "not_allowed", 
+                        "risk_score": "high", 
+                        "user_experience_banner": "basic"
+                    }
+                ], 
+                "rule": "Default Action", 
+                "uuid": "49b5b515-b25d-45dd-94f1-ae35b5e15993"
+            }
+        ], 
+        "safemail_mobile": [], 
+        "safemail_url_obfuscation": {
+            "rules": [], 
+            "version": 1
+        }, 
+        "safemail_whitelist": [], 
+        "smtp_attachments": {
+            "quarantine_spec": [
+                {
+                    "enabled": false, 
+                    "from": [], 
+                    "name": "default", 
+                    "subject": "", 
+                    "to": []
+                }
+            ], 
+            "rules": [
+                {
+                    "action": "allow", 
+                    "attachment_types": {
+                        "all": true, 
+                        "file_types": []
+                    }, 
+                    "description": "Allow all", 
+                    "from": {
+                        "all": true, 
+                        "groups": [], 
+                        "users": [], 
+                        "wc_groups": []
+                    }, 
+                    "plugins": [], 
+                    "quarantine": {
+                        "enabled": false, 
+                        "profiles": [
+                            "default"
+                        ]
+                    }, 
+                    "rule": "Default Rule", 
+                    "to": {
+                        "all": true, 
+                        "groups": [], 
+                        "users": [], 
+                        "wc_groups": []
+                    }, 
+                    "uuid": "16fe02dc-0ffb-4457-9e64-79b703f58c8e"
+                }
+            ]
+        }, 
+        "sslbump_bypass": [], 
+        "sslbump_bypassV2": [], 
+        "sslbump_bypass_use_V2": false, 
+        "sslbump_integrations": [], 
+        "sslbump_v3": {}, 
+        "state": "published", 
+        "supported_browsers": {
+            "Chrome": {
+                "block_older": false, 
+                "created_at": 1645159425442, 
+                "desc": "Google Chrome", 
+                "enabled": true, 
+                "min_version": 34, 
+                "updated_at": 1645171652644, 
+                "uuid": "64635e48-fd69-466b-bc6c-925fba7fa73f"
+            }, 
+            "Edge": {
+                "block_older": false, 
+                "created_at": 1645159425442, 
+                "desc": "Microsoft Edge", 
+                "enabled": true, 
+                "min_version": 12, 
+                "updated_at": 1645171652644, 
+                "uuid": "76f271bb-a178-4511-9860-77a18e0b09a4"
+            }, 
+            "Firefox": {
+                "block_older": false, 
+                "created_at": 1645159425442, 
+                "desc": "Mozilla Firefox", 
+                "enabled": true, 
+                "min_version": 17, 
+                "updated_at": 1645171652644, 
+                "uuid": "31a5c55a-5dff-4de3-9689-12ed16f8fac1"
+            }, 
+            "IE": {
+                "block_older": false, 
+                "created_at": 1645159425442, 
+                "desc": "Microsoft Internet Explorer", 
+                "enabled": true, 
+                "min_version": 10, 
+                "updated_at": 1645171652644, 
+                "uuid": "0e9a67c8-85e9-432c-bfeb-04a8ea66134a"
+            }, 
+            "Safari": {
+                "block_older": false, 
+                "created_at": 1645159425442, 
+                "desc": "Apple Safari", 
+                "enabled": true, 
+                "min_version": 9, 
+                "updated_at": 1645171652644, 
+                "uuid": "5f635f37-3eea-43e9-b000-aa35e2acd38f"
+            }, 
+            "Samsung": {
+                "block_older": false, 
+                "created_at": 1645159425442, 
+                "desc": "Samsung Internet", 
+                "enabled": true, 
+                "min_version": 9, 
+                "updated_at": 1645171652644, 
+                "uuid": "1ef2828c-6b1a-4164-8cea-f27371e97bdf"
+            }
+        }, 
+        "tid": -1, 
+        "unsupported_or_non_browsers": [
+            {
+                "action": "allow", 
+                "created_at": 1645159425442, 
+                "desc": "Default unsupported/non-browser rule", 
+                "isDefault": true, 
+                "log": true, 
+                "rules": [], 
+                "updated_at": 1645171652644, 
+                "uuid": "65479c68-8797-49e2-a7a1-1440cb0cb688"
+            }
+        ], 
+        "updatedAt": 1645171652647, 
+        "updatedExceptionV3": false, 
+        "webroot_categories": false
+    }, 
+    "setting": "policy", 
+    "status": 200, 
+    "tid": "-1"
+}
